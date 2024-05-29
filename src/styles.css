@@ -1,1 +1,254 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Adamina';
+  src: url('assets/fonts/Adamina.ttf') format('truetype');
+  font-family: 'ABeeZee';
+  src: url('assets/fonts/ABeeZee.ttf') format('truetype');
+}
+
+:root {
+  /* Typography */
+  --base-font-size: 16px;
+  --heading-font-size: 2rem;
+  --small-font-size: 0.875rem;
+  --base-line-height:1.6;
+
+  /* Color Palette */
+  /* Blues */
+  --very-dark-blue: #050f1a;
+  --dark-blue: #003366;
+  --blue:#708dba;
+  --cornflower-blue: #6495ed;
+  --vibrant-sky-blue: #5db0e6;
+  --sky-blue: #c8dae0;
+  --light-sky-blue: #c0daef;
+  --pale-sky-blue: #e8f2fb;
+  /* Inbetween blues */
+  --soft-lavender: #6785b4;
+  --misty-aqua: #a9cecf;
+  /* Oranges to beige */
+  --warm-orange: #e5863a;
+  --sand: #f4cca1;
+  --dark-sand: #e2c499;
+  --dark-beige:#d6c5a6; 
+  --light-earth: #cec1a9;
+  --beige: #f5f5dc;
+  --soft-beige: #e1d5cf;
+
+  --neutral-gray: #cccccc;
+
+  /*icons*/
+  --logo-small: 120px;
+  --logo-medium:150px;
+  --logo-large: 180px;
+  --icon-small: 14px;
+  --icon-medium: 20px;
+  --icon-large: 24px;
+  --icon-xl: 30px;
+
+}
+html {
+  height:100%;
+  width:100%;
+ }
+
+body{
+  margin: 0;
+  height:3865px !important;
+  font-size: var(--base-font-size) !important;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+  
+}
+
+nav {
+  width: 100%;
+  height: 2%;
+}
+
+
+Section{
+  margin:20px 0 10px 0;
+  width: 97%;
+  height: 20%;
+  border-radius: 20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(182, 179, 179, 0.35);
+}
+
+footer{
+  width:100%;
+  margin-top:2%;
+  height:10%;
+}
+body.dark-theme ,body.dark-theme nav , body.dark-theme footer {
+  background: url('assets/images/dark-bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+body.light-theme ,body.light-theme nav,body.light-theme footer  {
+  background: url('assets/images/light-bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+body.dark-theme nav .fa-sun  ,  body.light-theme  nav .fa-moon{
+  display: inline !important;
+}
+body.dark-theme nav .fa-moon ,  body.light-theme nav .fa-sun {
+  display: none !important;
+} 
+/*the highlight in the about me section*/
+.dark-theme .highlight {
+  background-color:var(--vibrant-sky-blue);
+  transition: background-color 0.5s ease-in-out;
+}
+.light-theme .highlight {
+  background-color:var(--warm-orange);
+  transition: background-color 0.5s ease-in-out;
+} 
+
+
+/* Typography */
+h1, h2, h3, h4 {
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: 600;
+}
+p {
+  font-size: var(--base-font-size);
+  color: white;
+  line-height: var(--base-line-height);
+  font-family: 'ABeeZee',sans-serif;
+}
+
+/* Links */
+a, .nav-link {
+  text-decoration: none;
+}
+
+a:hover, .nav-link:hover {
+  color: var(--beige);
+}
+
+/* Focus Styles for Accessibility */
+a:focus, button:focus, input:focus, .nav-link:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Buttons */
+.button-primary, .button-cta {
+  background-color: var(--cornflower-blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--small-font-size);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.button-primary:hover, .button-cta:hover {
+  background-color: var(--soft-lavender);
+}
+
+
+/* Form Background */
+.form-background {
+  background-color: var(--misty-aqua);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Warning and Alerts */
+.warning {
+  background-color: var(--warm-orange);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Borders and Separators */
+.border {
+  border-color: var(--dark-sand);
+}
+
+/* Gradient Backgrounds */
+.gradient-background {
+  background: linear-gradient(to right, var(--pale-sky-blue), var(--light-sky-blue));
+}
+
+/* RTL support */
+body.rtl {
+  direction: rtl;
+}
+/*************************************************/
+/* Media Queries */
+
+/* Less than 320px */
+@media (max-width: 319px) {
+  .card {
+    padding: 8px;
+    border-radius: 2px;
+  }
+  .button-primary, .button-cta {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  p{
+    --base-font-size: 12px;
+  }
+
+}
+
+/* From 320px to 576px */
+@media (min-width: 320px) and (max-width: 575px) {
+  .button-primary, .button-cta {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  p{
+    --base-font-size: 14px;
+  }
+}
+
+/* From 576px to 768px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .button-primary, .button-cta {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
+/* From 768px to 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .button-primary, .button-cta {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+}
+
+/* Bigger than 992px */
+@media (min-width: 992px) {
+  .button-primary, .button-cta {
+    padding: 16px 32px;
+    font-size: 20px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* Enhance hover effects for non-touch, fine-point devices */
+  a:hover, .button-primary:hover, .button-cta:hover, .link:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects for touch devices */
+  a:hover, .button-primary:hover, .button-cta:hover, .link:hover {
+    background-color: initial;
+    transform: none;
+  }
+}

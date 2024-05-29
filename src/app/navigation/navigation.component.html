@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between w-100">
+      <a class="navbar-brand" href="/">
+        <img *ngIf="currentLanguage === 'en'" src="assets/images/logo7.png" alt="English Logo" />
+        <img *ngIf="currentLanguage === 'ar'" src="assets/images/arabic-logo.png" alt="Arabic Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a
+            class="nav-item nav-link"
+            routerLink="/home"
+            routerLinkActive="active"
+            appViewportAnimation="home"
+            >{{ "HOME" | translate }}</a
+          >
+          <a
+            class="nav-item nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+            appViewportAnimation="about"
+            [highlightElementId]="'aboutHighlight'"
+            >{{ "ABOUT" | translate }}</a
+          >
+          <a
+            class="nav-item nav-link"
+            routerLink="/portfolio"
+            routerLinkActive="active"
+            appViewportAnimation="portfolio"
+            [carouselId]="'portfolioCarousel'"
+            >{{ "PORTFOLIO" | translate }}</a
+          >
+          <a
+            class="nav-item nav-link"
+            routerLink="/resume"
+            routerLinkActive="active"
+            appViewportAnimation="resume"
+            >{{ "RESUME" | translate }}</a
+          >
+          <a
+            class="nav-item nav-link"
+            routerLink="/contact"
+            routerLinkActive="active"
+            appViewportAnimation="contact"
+            >{{ "CONTACT" | translate }}</a
+          >
+        </div>
+      </div>
+      <div class="d-flex align-items-center px-3">
+        <!-- En/Ar Toggle Button -->
+        <a id="lang" class="nav-item nav-link language-toggle" href="#" (click)="toggleLanguage()">{{ "LANGUAGE_TOGGLE" | translate }}</a>
+        <!-- Dark/Light Theme Toggle -->
+        <button class="btn btn-secondary ml-2" id="theme-toggle" title="dark-light" type="button" (click)="toggleTheme()">
+          <i class="fas fa-sun fa-inverse"></i>
+          <i class="fas fa-moon fa-inverse" style="display: none"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+

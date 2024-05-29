@@ -1,0 +1,29 @@
+<h1 mat-dialog-title class="text-primary">{{ data.title | translate }}</h1>
+<div mat-dialog-content>
+  <div id="data-container" *ngIf="isArray(data.content); else otherContent" class="bg-white text-dark p-3">
+    <ul>
+      <li *ngFor="let item of data.content">
+        <h5 class="text-secondary">{{ item.TITLE | translate }}</h5>
+        <h6>
+          <h5 class="text-info">{{ item.COMPANY | translate }}</h5> - {{ item.DATES | translate }}
+        </h6>
+        <ul>
+          <li *ngFor="let desc of item.DESCRIPTION">{{ desc | translate }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <ng-template #otherContent>
+    <div *ngIf="isObject(data.content); else stringContent" class="bg-white text-dark">
+      <div *ngFor="let key of objectKeys(data.content)">
+        <h5 class="text-secondary text-dark">{{ key | translate }}:</h5> {{ data.content[key] }}
+      </div>
+    </div>
+    <ng-template #stringContent>
+      <p class="bg-white text-dark p-3">{{ data.content | translate }}</p>
+    </ng-template>
+  </ng-template>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-center">
+  <button mat-button mat-dialog-close class="btn btn-primary">{{ 'CLOSE' | translate }}</button>
+</div>

@@ -1,0 +1,143 @@
+/* Footer General Styles */
+.deneb_footer {
+  color: var(--warm-orange) !important;
+}
+.deneb_footer a {
+  color: rgb(47, 64, 255);
+  font-weight: 500;
+}
+.deneb_footer a:hover {
+  color: var(--dark-sand) !important;
+}
+
+#logo-image {
+  width: 170px;
+  height: 170px;
+}
+
+.widget {
+  width: 75%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: start;
+}
+
+h4 {
+  font-weight: 700;
+  color: rgb(226, 154, 10) !important;
+  letter-spacing: 0.2lvw;
+}
+
+/* Social Icons */
+.deneb_footer .social li {
+  display: inline-block;
+}
+
+.deneb_footer .social li a {
+  color: var(--warm-orange) !important;
+  transition: color 0.3s ease;
+}
+
+.deneb_footer .social li a:hover {
+  color: var(--sand) !important;
+}
+
+/* Contact Info */
+.deneb_footer .widget_contact .icon {
+  color: var(--warm-orange) !important;
+}
+
+.deneb_footer .widget_contact .info p {
+  margin: 0;
+}
+
+/* Footer Copyright Text */
+.deneb_footer .copyright_text {
+  text-align: center;
+  border-top: 1px solid var(--light-sky-blue) !important;
+  color: var(--blue) !important;
+}
+
+/* Responsive Adjustments */
+
+/* Less than 320px */
+@media (max-width: 319px) {
+  #logo-image {
+    width: 100px;
+    height: 100px;
+  }
+  .deneb_footer .social li a {
+    font-size: 12px;
+  }
+  .deneb_footer .widget {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* From 320px to 576px */
+@media (min-width: 320px) and (max-width: 575px) {
+  #logo-image {
+    width: 120px;
+    height: 120px;
+  }
+  .deneb_footer .social li a {
+    font-size: 14px;
+  }
+  .deneb_footer .widget {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* From 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  #logo-image {
+    width: 140px;
+    height: 140px;
+  }
+  .deneb_footer .social li a {
+    font-size: 16px;
+  }
+  .deneb_footer .widget {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* From 768px to 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  #logo-image {
+    width: 150px;
+    height: 150px;
+  }
+  .deneb_footer .social li a {
+    font-size: 18px;
+  }
+  .deneb_footer .widget {
+    width: 100%;
+    text-align: left;
+    align-items: left;
+  }
+}
+
+/* Bigger than 992px */
+@media (min-width: 992px) {
+  #logo-image {
+    width: 170px;
+    height: 170px;
+  }
+  .deneb_footer .social li a {
+    font-size: 20px;
+  }
+  .deneb_footer .widget {
+    width: 100%;
+    text-align: left;
+    align-items: left;
+  }
+}

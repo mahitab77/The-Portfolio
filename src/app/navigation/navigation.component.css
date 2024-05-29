@@ -1,0 +1,102 @@
+/* Makes the navbar sticky */
+.navbar-custom.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the navbar stays above other content */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Adjust the color and spread as needed */
+}
+
+/* Style for the language toggle, if needed */
+.language-toggle {
+  cursor: pointer;
+}
+
+.navbar-brand:focus {
+  outline: none;
+  outline-offset: none;
+  border-radius: none;
+  box-shadow: none;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white;
+  font-weight: bold;
+}
+#lang {
+  white-space: nowrap;
+}
+
+/***************dark/light Theme********/
+#theme-toggle {
+  background: transparent;
+  border: none;
+}
+/***********burger menu****mobile*****/
+.navbar-toggler .navbar-toggler-icon {
+  background-color: rgb(239, 160, 13);
+  font-size: var(--icon-xl);
+  border-radius: 3px;
+}
+/*************************************************************************/
+/* Media Queries */
+
+/* Less than 320px */
+@media (max-width: 319px) {
+  nav {
+    padding: 3px 0 !important;
+  }
+  .container-fluid {
+    padding: 0 5px !important;
+  }
+  .px-3 {
+    padding-left: 3px !important ;
+    padding-right: 3px !important ;
+  }
+  .navbar-brand img {
+    width: var(--logo-small);
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    font-size: var(--icon-medium);
+  }
+  #lang {
+    font-size: var(--icon-small);
+  }
+  #theme-toggle {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: var(--icon-small);
+  }
+}
+
+/* From 320px to 576px */
+@media (min-width: 320px) and (max-width: 575px) {
+  nav {
+    padding: 3px 0 !important;
+  }
+  .container-fluid {
+    padding: 0 7px !important;
+  }
+  .px-3 {
+    padding-left: 4px !important ;
+    padding-right: 4px !important ;
+  }
+  .navbar-brand img {
+    width: var(--logo-medium);
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    font-size: var(--icon-large);
+  }
+  #lang {
+    font-size: var(--icon-small);
+  }
+  #theme-toggle {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    font-size: var(--icon-small);
+  }
+}

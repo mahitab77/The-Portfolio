@@ -1,0 +1,42 @@
+<div appViewportAnimation (animationComplete)="initializeCarousel()">
+  <h2 class="w-100 text-center text-white mb-2">{{ 'MY_PROJECTS_TITLE' | translate }}</h2>
+
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <!-- For carousel indicators -->
+    <ol class="carousel-indicators">
+      <li
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === activeSlideIndex"
+        (click)="activeSlideIndex = i"
+      ></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <!-- For carousel items -->
+      <div
+        class="carousel-item"
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === activeSlideIndex"
+      >
+        <img
+          src="{{ slide.thumbnail }}"
+          class="d-block w-100"
+          alt="{{ slide.name }}"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ slide.name }}</h5>
+          <a href="{{ slide.url }}" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+    <!-- Replace data-bs-target and data-bs-slide with Angular event bindings -->
+    <button class="carousel-control-prev" type="button" (click)="prevSlide()">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" (click)="nextSlide()">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

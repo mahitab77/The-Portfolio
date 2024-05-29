@@ -1,0 +1,50 @@
+.highlight-paragraph{
+  font-size: var(--base-font-size);
+  font-weight: 500;
+  color:white;
+}
+
+.highlight-paragraph .line {
+  display: block;
+  padding: 5px 0;
+  transition: background-color 1.5s ease;
+}
+
+/* RTL Support */
+body.rtl .highlight-paragraph {
+  text-align: right;
+}
+
+
+/*************************************************************************/
+/* Media Queries */
+
+/* Less than 320px */
+@media (max-width: 319px) {
+
+  
+ .line {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+.highlight-paragraph{
+  font-size: 12px; 
+}
+
+}
+
+/* From 320px to 576px */
+@media (min-width: 320px) and (max-width: 575px) {
+ 
+  .line {
+    padding-right:25px !important;
+    padding-left:25px !important;
+  }
+  .highlight-paragraph{
+    font-size: 14px;
+  }
+  
+ 
+}
+
+  

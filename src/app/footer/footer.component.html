@@ -1,0 +1,92 @@
+<footer class="deneb_footer pt-5">
+	<div class="widget_wrapper">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-lg-4 col-md-6 col-12">
+			<div class="widget widget_about">
+			  <div class="widget_title">
+				<div id="logos" class="d-flex align-items-center">
+				  <a class="navbar-brand" href="/">
+					<img *ngIf="currentLanguage === 'en'" src="assets/images/logo7.png" alt="English Logo" />
+					<img *ngIf="currentLanguage === 'ar'" src="assets/images/arabic-logo.png" alt="Arabic Logo" />
+				  </a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				</div>
+			  </div>
+			  <p>{{ 'FOOTER_TITLE' | translate }}</p>
+			  <div class="d-flex">
+				<ul class="social list-unstyled d-flex">
+				  <li class="mx-2">
+					<a href="https://www.linkedin.com/in/mahitab-elbehery-79bba520/" class="btn btn-outline-light btn-lg"><i class="fab fa-linkedin"></i></a>
+				  </li>
+				  <li class="mx-2">
+					<a href="https://github.com/mahitab77" class="btn btn-outline-light btn-lg"><i class="fab fa-github"></i></a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-lg-4 col-md-6 col-12">
+			<div class="widget widget_link d-flex align-items-center">
+			  <div class="widget_title">
+				<h4>Links</h4>
+			  </div>
+			  <ul>
+				<li><a routerLink="/about">{{ 'ABOUT_ME_TITLE' | translate }}</a></li>
+				<li><a routerLink="/portfolio">{{ 'MY_PROJECTS_TITLE' | translate }}</a></li>
+				<li><a routerLink="/resume">{{ 'RESUME' | translate }}</a></li>
+				<li><a routerLink="/home">{{ 'SKILLS-T' | translate }}</a></li>
+			  </ul>
+			</div>
+		  </div>
+		  <div class="col-lg-4 col-md-6 col-12">
+			<div class="widget widget_contact">
+			  <div class="widget_title">
+				<h4>{{ 'CONTACT_US' | translate }}</h4>
+			  </div>
+			  <div class="contact_info">
+				<div class="single_info">
+				  <div class="icon">
+					<i class="fas fa-phone-alt"></i>
+				  </div>
+				  <div class="info">
+					<p>{{ 'PHONE_LABEL' | translate }} <a href="tel:00201030333996">00201030333996</a></p>
+				  </div>
+				</div>
+				<div class="single_info">
+				  <div class="icon">
+					<i class="fas fa-envelope"></i>
+				  </div>
+				  <div class="info">
+					<p>{{ 'EMAIL_LABEL' | translate }} <a href="mailto:mahitab.elbehery&#64;gmail.com">mahitab.elbehery&#64;gmail.com</a></p>
+				  </div>
+				</div>
+				<div class="single_info">
+				  <div class="icon">
+					<i class="fas fa-map-marker-alt"></i>
+				  </div>
+				  <div class="info">
+					<p>{{ 'LOCATION_LABEL' | translate }} {{ 'NEW_CAIRO' | translate }}, {{ 'EGYPT' | translate }}</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="copyright_area mt-1">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-lg-12">
+			<div class="copyright_text">
+			  <p>Copyright &copy; 2024 All rights reserved.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </footer>
+  

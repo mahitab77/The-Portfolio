@@ -1,0 +1,148 @@
+.card {
+  height: 160px; /* Fixed height for all cards */
+  overflow: hidden; /* Hides any content that overflows the set height */
+  margin-bottom: 20px; /* Adds space between the rows */
+  background-color: var(--neutral-gray);
+  border: 3px solid var(--dark-sand);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--warm-orange);
+}
+
+.card a {
+  color: var(--warm-orange) !important;
+}
+
+.card-title {
+  font-weight: bold; /* Example: making the title bold */
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row > [class^="col-"] {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow: hidden; /* Ensures that overflow content is hidden, with ellipsis */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  line-height: 1.5em; /* Adjust based on your preference */
+  max-height: 4.5em;
+  color: var(--dark-blue) !important;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #f8f9fa; /* Light grey background on hover */
+}
+
+/*************************************************************************/
+/* Media Queries */
+
+/* Less than 320px */
+@media (max-width: 319px) {
+  .card {
+    height: 70px;
+    margin-bottom:4px; 
+    padding:2px;
+  }
+  .card-body {
+    padding:2px;
+  }
+  .card-text {
+    line-height: 1em;
+    max-height: 4em;
+    font-size: 12px !important;
+  }
+  .card-title {
+    font-size: 14px !important;
+  }
+}
+
+/* From 320px to 576px */
+@media (min-width: 320px) and (max-width: 575px) {
+  .card {
+    height:70px;
+    margin-bottom:4px;
+    padding:2px;
+  }
+  .card-body {
+    padding: 2px;
+  }
+  .card-text {
+    line-height: 1em;
+    max-height: 4em;
+    font-size: 12px !important;
+  }
+  .card-title {
+    font-size: 14px !important;
+  }
+}
+
+/* From 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Adjusting for 4 rows */
+  .row:nth-of-type(2) .col-md-4:nth-of-type(2),
+  .row:nth-of-type(2) .col-md-4:nth-of-type(3) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .row:nth-of-type(3) .col-md-4:nth-of-type(2),
+  .row:nth-of-type(3) .col-md-4:nth-of-type(3) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .row:nth-of-type(4) .col-md-4:nth-of-type(1),
+  .row:nth-of-type(4) .col-md-4:nth-of-type(2) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .card {
+    height: 100px;
+    margin-bottom: 10px;
+    padding:5px;
+  }
+  .card-body {
+    padding: 10px;
+  }
+  .card-text {
+    line-height: 1.1em;
+    max-height: 4.1em;
+    font-size: 14px !important;
+  }
+  .card-title {
+    font-size: 16px !important;
+  }
+}
+
+/* From 768px to 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .card {
+        margin-bottom: 10px;
+      }
+      .card-body {
+        padding: 10px;
+      }
+    
+    .card-text {
+      line-height: 1.1em;
+      max-height: 4.1em;
+      font-size: 14px !important;
+    }
+    .card-title {
+      font-size: 16px !important;
+    }
+  }

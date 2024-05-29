@@ -1,0 +1,59 @@
+<!-- home.component.html -->
+<div class="container">
+  <div class="row">
+    <!-- Image Column -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="photo-wrapper">
+        <div class="back"></div>
+        <img alt="mahi" class="profile-photo" src="assets/images/m-removedbg.png">
+      </div>
+    </div>
+    
+
+    <!-- Text and Icons Column -->
+    <div class="col-md-6">
+      <div class="hero-text">
+        <h2 class="text-white py-2">{{ 'HERO_TITLE' | translate }}</h2>
+        <p class="text-white">
+          {{ 'HERO_DESCRIPTION' | translate }}
+        </p>  
+      </div>
+
+      <!-- Icons Grid -->
+      <div class="icon-grid">
+        <div class="row">
+            <div class="col-md-4 text-center">
+            <i class="fab fa-html5"></i> {{ 'SKILLS.HTML' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-css3-alt"></i> {{ 'SKILLS.CSS' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-js"></i> {{ 'SKILLS.JAVASCRIPT' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-bootstrap"></i> {{ 'SKILLS.BOOTSTRAP' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-github"></i> {{ 'SKILLS.GITHUB' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-angular"></i> {{ 'SKILLS.ANGULAR' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-node-js"></i> {{ 'SKILLS.NODEJS' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fab fa-react"></i> {{ 'SKILLS.REACT' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i><img class="skill-svg-icon" src="assets/images/flutter-icon.png" alt="Flutter"></i> {{ 'SKILLS.FLUTTER' | translate }}
+          </div>
+          <div class="col-md-4 text-center">
+            <i><img class="skill-svg-icon" src="assets/images/xml-file.svg" alt="XML"></i> {{ 'SKILLS.XML' | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

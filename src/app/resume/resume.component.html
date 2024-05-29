@@ -1,0 +1,48 @@
+<div class="container">
+  <h2 class="w-100 text-center text-white mb-2">{{ 'RESUME_TITLE' | translate }}</h2>
+
+  <!-- Professional Summary -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="card" (click)="openDialog('PROFESSIONAL_SUMMARY')">
+        <div class="card-body">
+          <h5 class="card-title">{{ 'RESUME-DATA.PROFESSIONAL_SUMMARY_TITLE' | translate }}</h5>
+          <p class="card-text">
+            {{ 'RESUME-DATA.PROFESSIONAL_SUMMARY_DETAILS' | translate }}...
+            <a (click)="openDialog('PROFESSIONAL_SUMMARY')">{{ 'READ_MORE' | translate }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Experience, Education, Certifications -->
+  <div class="row mb-3">
+    <div class="col-md-4" *ngFor="let section of ['WORK_EXPERIENCE', 'EDUCATION', 'CERTIFICATIONS']">
+      <div class="card mb-3" (click)="openDialog(section)">
+        <div class="card-body">
+          <h5 class="card-title">{{ 'RESUME-DATA.' + section + '_TITLE' | translate }}</h5>
+          <p class="card-text">
+            {{ 'RESUME-DATA.' + section + '_DETAILS' | translate }}...
+            <a (click)="openDialog(section)">{{ 'READ_MORE' | translate }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Skills, Languages, Interests -->
+  <div class="row mb-3">
+    <div class="col-md-4" *ngFor="let section of ['ADDITIONAL_SKILLS', 'LANGUAGES', 'INTERESTS']">
+      <div class="card mb-3" (click)="openDialog(section)">
+        <div class="card-body">
+          <h5 class="card-title">{{ 'RESUME-DATA.' + section + '_TITLE' | translate }}</h5>
+          <p class="card-text">
+            {{ 'RESUME-DATA.' + section + '_DETAILS' | translate }}...
+            <a (click)="openDialog(section)">{{ 'READ_MORE' | translate }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
