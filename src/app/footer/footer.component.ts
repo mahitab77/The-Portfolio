@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { Router, NavigationEnd } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { Renderer2 } from '@angular/core';
+
 
 @Component({
   selector: 'app-footer',
@@ -10,8 +14,12 @@ import { Renderer2 } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   currentLanguage: string = 'en';
+  
+ 
 
   constructor(
+    private router: Router,
+    private viewportScroller: ViewportScroller,
     private http: HttpClient,
     private translate: TranslateService,
     private renderer: Renderer2
@@ -24,6 +32,18 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   // this.activatedRoute.fragment.subscribe(fragment => {
+   //   this.scrollTo(fragment);
+   // });
+    // Jump to section
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const fragment = event.urlAfterRedirects.split('#')[1];
+        if (fragment) {
+          this.scrollToSection(fragment); 
+        }
+      }
+    });
     this.translate.onLangChange.subscribe(() => {
       this.updateDirection();
     });
@@ -59,6 +79,12 @@ export class FooterComponent implements OnInit {
           // Add your error message or handling here
         }
       );
+    }
+  }
+
+  scrollToSection(sectionId: string): void {
+    if (sectionId) {
+      this.viewportScroller.scrollToAnchor(sectionId);
     }
   }
 }

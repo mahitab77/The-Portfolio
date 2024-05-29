@@ -34,10 +34,32 @@
 				<h4>Links</h4>
 			  </div>
 			  <ul>
-				<li><a routerLink="/about">{{ 'ABOUT_ME_TITLE' | translate }}</a></li>
-				<li><a routerLink="/portfolio">{{ 'MY_PROJECTS_TITLE' | translate }}</a></li>
-				<li><a routerLink="/resume">{{ 'RESUME' | translate }}</a></li>
-				<li><a routerLink="/home">{{ 'SKILLS-T' | translate }}</a></li>
+				<!--<li><a [routerLink]="['/about']" fragment="about">{{ 'ABOUT_ME_TITLE' | translate }}</a></li>
+				<li><a [routerLink]="['/portfolio']" fragment="portfolio">{{ 'MY_PROJECTS_TITLE' | translate }}</a></li>
+				<li><a [routerLink]="['/resume']" fragment="resume">{{ 'RESUME' | translate }}</a></li>
+				<li><a [routerLink]="['/home']" fragment="home">{{ 'SKILLS-T' | translate }}</a></li>-->
+				<li><a routerLink="/about"
+					routerLinkActive="active"
+					appViewportAnimation="about"
+					>{{ "ABOUT_ME_TITLE" | translate }}</a
+				  ></li>
+				  <li><a routerLink="/portfolio"
+					routerLinkActive="active"
+					appViewportAnimation="portfolio"
+					>{{ "MY_PROJECTS_TITLE" | translate }}</a
+				  ></li>
+				  <li><a routerLink="/resume"
+					routerLinkActive="active"
+					appViewportAnimation="resume"
+					>{{ "RESUME" | translate }}</a
+				  ></li>
+				<li><a routerLink="/home"
+					routerLinkActive="active"
+					appViewportAnimation="home"
+					>{{ "SKILLS-T" | translate }}</a
+				  ></li>
+              
+
 			  </ul>
 			</div>
 		  </div>
