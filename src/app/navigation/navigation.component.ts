@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { ElementRef, ViewChild } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
@@ -13,6 +14,10 @@ import { Renderer2 } from '@angular/core';
 export class NavigationComponent implements OnInit {
   currentLanguage: string = 'en';
   isDarkTheme: boolean = true; // Set initial theme to dark
+
+  @ViewChild('navbarTogglerBtn', { static: true }) navbarTogglerBtn!: ElementRef<HTMLButtonElement>;
+  @ViewChild('navbarCollapse', { static: true }) navbarCollapse!: ElementRef<HTMLDivElement>;
+
 
   constructor(
     private translate: TranslateService,
@@ -32,6 +37,9 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //show mobile menu
+    this.navbarTogglerBtn.nativeElement.addEventListener('click', this.toggleMenu.bind(this));
+
     // Set initial theme to light
     this.renderer.addClass(document.body, 'dark-theme');
     this.renderer.removeClass(document.body, 'light-theme');
@@ -96,5 +104,9 @@ export class NavigationComponent implements OnInit {
       this.viewportScroller.scrollToAnchor(sectionId);
     }
   }
+  toggleMenu() {
+    this.navbarCollapse.nativeElement.classList.toggle('show');
+  }
+
+
 }
-//////////////////////////////////////

@@ -102,7 +102,7 @@
 /* Media Queries */
 
 /* Less than 320px */
-@media (max-width: 319px) {
+@media (max-width: 320px) {
   .back {
     width: 120px !important;
     height: 120px !important;
@@ -142,26 +142,45 @@
 }
 
 /* From 320px to 576px */
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 576px) {
   .back {
-    width: 220px;
-    height: 220px;
-    border-width: 20px;
+    width: 150px;
+    height: 150px;
+    border-width: 15px;
+    bottom: 40px;
+    right: 70px;
   }
 
   .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
   }
 
-  .icon-grid .col-md-4 {
-    width: 70px;
-  }
+  h2{
+    font-size:20px !important;
+    margin-bottom: 4px;
+    padding-top: 5px !important;
+}
+p{
+  margin-bottom: 4px !important;
+}
+.row{
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+.icon-grid .col-md-4 {
+  width: 65px;
+  height: 55px;
+  font-size:14px !important;
+}
 
-  .icon-grid i {
-    font-size: 38px;
-    width: 60px;
-  }
+.icon-grid i {
+  font-size:30px !important;
+  width:70px;
+  height:60px;
+ 
+}
+
 }
 
 /* From 576px to 768px */
@@ -171,7 +190,14 @@
     height: 250px !important;
     border-width: 25px !important;
   }
-
+  
+  h2{
+    margin-top: 6px;
+    margin-bottom:3px;
+  }
+  p{
+    margin-bottom:8px !important;
+  }
   .profile-photo {
     width: 230px;
     height: 230px;
@@ -188,16 +214,32 @@
 }
 
 /* From 768px to 992px */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .back {
     width: 300px;
     height: 300px;
     border-width: 30px;
   }
-
+  h2{
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  p{
+    width:450px;
+    margin-bottom:10px !important;
+  }
   .profile-photo {
     width: 280px;
     height: 280px;
+  }
+  
+  .icon-grid .col-md-4 {
+    width: 85px;
+  }
+
+  .icon-grid i {
+    font-size: 45px;
+    width: 75px;
   }
 }
 

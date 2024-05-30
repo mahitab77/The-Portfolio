@@ -21,11 +21,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/the-portfolio",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -35,12 +35,14 @@
               "src/assets"
             ],
             "styles": [
-              
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.css",
               "node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
@@ -49,8 +51,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1.7mb",
+                  "maximumError": "1.7mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -100,7 +102,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "@angular/material/prebuilt-themes/pink-bluegrey.css"
+              "node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
             ],
             "scripts": []
           }

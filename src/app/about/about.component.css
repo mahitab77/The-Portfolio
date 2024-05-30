@@ -1,7 +1,7 @@
-.highlight-paragraph{
+.highlight-paragraph {
   font-size: var(--base-font-size);
   font-weight: 500;
-  color:white;
+  color: white;
 }
 
 .highlight-paragraph .line {
@@ -15,36 +15,67 @@ body.rtl .highlight-paragraph {
   text-align: right;
 }
 
-
 /*************************************************************************/
 /* Media Queries */
 
 /* Less than 320px */
-@media (max-width: 319px) {
-
-  
- .line {
-    padding-right: 16px !important;
-    padding-left: 16px !important;
+@media (max-width: 320px) {
+  .line {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    padding-bottom: 5px !important;
   }
-.highlight-paragraph{
-  font-size: 12px; 
-}
-
+  .highlight-paragraph {
+    font-size: 12px;
+  }
+  #highlight-div {
+    margin-bottom: 5px;
+    padding-bottom: 5px !important;
+  }
+  #highlight-div p {
+    margin-bottom: 5px;
+    padding-bottom: 0 !important;
+  }
 }
 
 /* From 320px to 576px */
-@media (min-width: 320px) and (max-width: 575px) {
- 
+@media (min-width: 320px) and (max-width: 576px) {
   .line {
-    padding-right:25px !important;
-    padding-left:25px !important;
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+    padding-bottom: 5px !important;
   }
-  .highlight-paragraph{
+  .highlight-paragraph {
     font-size: 14px;
   }
-  
- 
+  #highlight-div {
+    margin-bottom: 5px;
+    padding-bottom: 5px !important;
+  }
+  #highlight-div p {
+    margin-bottom: 5px;
+    padding-bottom: 0 !important;
+  }
 }
 
-  
+/* From 576px to 768px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .line {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  .highlight-paragraph {
+    font-size: 16px;
+  }
+}
+
+/* From 768px to 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+  .line {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
+  .highlight-paragraph {
+    font-size: 18px;
+  }
+}
